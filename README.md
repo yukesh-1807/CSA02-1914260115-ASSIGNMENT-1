@@ -8,12 +8,12 @@ Student Details
 - Department: Mechanical Engineering
 - College: SIMATS
 
-Compiler Details
+Development Environment
 
-- Compiler: GCC
-- Version: GCC 13
-- Compile Command: "gcc filename.c -o output"
-- Execution Command: "./output"
+- IDE used: Dev-C++
+- Compiler: The C compiler configured in Dev-C++ (the exact compiler/version depends on the installation)
+- Compile and run: Open the required `.c` file in Dev-C++ and use **Compile & Run**.
+- Alternative: If GCC is installed, compile with `gcc filename.c -o output` and run `./output` (or `output.exe` on Windows).
 
 Assignment Details
 
@@ -41,9 +41,9 @@ Repository Structure
 Execution Steps
 
 1. Open the required task folder.
-2. Open the C source file.
-3. Compile using the GCC command.
-4. Execute the generated program.
+2. Open the C source file in Dev-C++.
+3. Use **Compile & Run**.
+4. For programs that read input files, keep those files in the program's working directory.
 5. Verify the output.
 6. Refer to the output screenshots.
 
