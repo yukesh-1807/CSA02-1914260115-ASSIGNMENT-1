@@ -24,17 +24,17 @@ Tariffs should not be hard-coded with `#define`: the normal rate is loaded from 
 
 The first value represents 00:00–00:15. Every 96 values form one day. Within each day, indexes 72 through 87 represent 18:00 up to but not including 22:00 and receive the 20% higher tariff. A full non-leap year contains 35,040 values.
 
-### Compile and run (Dev-C++ / GCC)
+### Compile and run (Dev-C++)
 
 1. Keep `main.c`, `tariff.txt`, and `readings.txt` together in the program's working directory.
-2. In Dev-C++, open `main.c`, compile and run it. Ensure the working directory contains both text files.
-3. With GCC in that folder:
+2. Open `main.c` in the **Dev-C++ IDE**, then use its Compile and Run command. Dev-C++ invokes the C compiler configured in the IDE; the exact compiler depends on your Dev-C++ installation.
+3. Make sure the program's working directory contains both `tariff.txt` and `readings.txt` when you run it.
+4. Alternatively, if GCC is installed and available in your terminal, compile with:
    ```sh
    gcc -std=c11 -Wall -Wextra -pedantic main.c -o smart_meter
-   ./smart_meter
    ```
-   On Windows Command Prompt, run `smart_meter.exe`.
-4. Edit `tariff.txt` (for example, change `5.00` to `6.25`) to change the tariff without recompiling.
+   Then run `smart_meter.exe` on Windows or `./smart_meter` on Linux/macOS.
+5. Edit `tariff.txt` (for example, change `5.00` to `6.25`) to change the tariff without recompiling.
 
 ## D. Evidence-based defence and test plan
 
