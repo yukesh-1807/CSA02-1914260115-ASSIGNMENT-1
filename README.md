@@ -3,8 +3,8 @@ C Programming – Assignment 1 (CO1)
 
 Student Details
 
-- Name: Yukesh
-- Register Number: YOUR REGISTER NUMBER
+- Name: Yukesh Babu V
+- Register Number: 1914260115
 - Department: Mechanical Engineering
 - College: SIMATS
 
