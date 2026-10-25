@@ -1,0 +1,136 @@
+TASK 1 – UNDERSTAND THE PROBLEM AND IDENTIFY THE DATA
+
+Course: C Programming – CO1
+Assignment: 1
+Marks: 4
+Bloom's Level: K4 – Analyse
+
+1. Problem Analysis
+
+Grama Jyothi Rural Electricity Co-operative supplies electricity to approximately 4,000 households every month. The meter reader records the previous and current meter readings of each household.
+
+The main objective is to develop a C program that calculates electricity consumption and generates accurate electricity bills.
+
+The program must calculate units consumed, energy charges, fixed charges and the final bill. It must also handle meter rollover and avoid negative bills and calculation errors.
+
+2. Inputs and Outputs
+
+Inputs
+
+Input| Description
+Household Number| Identifies each household
+Previous Reading| Previous electricity meter reading
+Current Reading| Latest electricity meter reading
+Category| Identifies the household category
+
+Outputs
+
+Output| Description
+Units Consumed| Difference between current and previous readings
+Energy Charge| Electricity charge based on consumption slabs
+Fixed Charge| Fixed amount added to the bill
+Total Bill| Sum of energy charge and fixed charge
+
+3. Constants and Variables
+
+Constants
+
+Constants are values that remain unchanged during program execution.
+
+Constant| Value
+First Slab Limit| 100 units
+Second Slab Limit| 200 units
+First Slab Rate| ₹0/unit
+Second Slab Rate| ₹2.25/unit
+Third Slab Rate| ₹4.50/unit
+Fixed Charge| ₹50
+
+Variables
+
+Variables are values that can change during program execution.
+
+- Household number
+- Previous meter reading
+- Current meter reading
+- Units consumed
+- Energy charge
+- Total bill
+
+4. Suitable Data Types
+
+Data Item| Data Type| Reason
+Household Number| int| Stores household identification number
+Previous Reading| unsigned short| Stores 16-bit meter reading
+Current Reading| unsigned short| Stores 16-bit meter reading
+Units Consumed| unsigned int| Stores electricity consumption
+Energy Charge| long| Stores charge in paise
+Fixed Charge| long| Stores fixed charge in paise
+Total Bill| long| Stores final bill in paise
+
+Money should be stored in integer paise instead of floating-point rupees to avoid floating-point rounding errors.
+
+5. Rules for a Correct Bill
+
+1. The electricity bill must never be negative.
+2. Units consumed must be calculated correctly.
+3. The first 100 units are free.
+4. Units from 101 to 200 are charged at ₹2.25 per unit.
+5. Units above 200 are charged at ₹4.50 per unit.
+6. A fixed charge of ₹50 must be added.
+7. Total bill = Energy charge + Fixed charge.
+8. Meter rollover must be handled correctly.
+
+6. Assumptions
+
+1. The electricity meter uses a 16-bit unsigned register.
+2. The maximum meter reading is 65,535.
+3. After reaching 65,535, the meter reading rolls over to 0.
+4. Tariff rates remain unchanged during one program execution.
+5. Each household has one meter reading for the billing period.
+
+7. Alternative Concept – Storing Meter Readings as Text
+
+Instead of storing meter readings as integers, they can be stored as character strings.
+
+Example:
+
+- Integer representation: 1530
+- String representation: "01530"
+
+If readings are stored as strings, the program must convert them into integers before performing calculations.
+
+Comparison
+
+Operation| Integer| String
+Storage| O(1)| O(d)
+Conversion| Not required| O(d)
+Comparison| O(1)| O(d)
+Space| Fixed| Depends on digits
+
+Here, d represents the number of digits in the meter reading.
+
+Explanation
+
+Integer representation allows direct arithmetic calculations and comparisons. String representation requires additional conversion and processing.
+
+Therefore, integer representation is more suitable for the electricity billing system.
+
+8. Time and Space Complexity
+
+For each meter reading:
+
+Integer Representation:
+
+- Time complexity for comparison: O(1)
+- Space complexity: O(1)
+
+String Representation:
+
+- Time complexity for conversion and comparison: O(d)
+- Space complexity: O(d)
+
+Integer representation is more efficient because it requires constant time and fixed storage for each reading.
+
+9. Conclusion
+
+The electricity billing system requires suitable inputs, outputs, constants, variables and data types to calculate bills accurately. Integer meter readings and integer paise calculations help reduce errors. Proper handling of meter rollover ensures reliable billing for households.
