@@ -1,0 +1,48 @@
+Task 5 local verification results
+=================================
+
+Compiler: GCC
+Flags: -std=c11 -Wall -Wextra -Werror
+
+1. Normal build
+Command:
+gcc -std=c11 -Wall -Wextra -Werror main.c billing.c -o billing
+
+Result: Compiled successfully with no warnings.
+
+Input:
+3
+100
+
+Output:
+Enter quantity: Enter unit price: Subtotal: 300.00
+Tax (5%): 15.00
+Total: 315.00
+
+2. Debug build
+Command:
+gcc -std=c11 -Wall -Wextra -Werror -DDEBUG main.c billing.c -o billing-debug
+
+Result: Compiled successfully with no warnings.
+
+Input:
+3
+100
+
+Output:
+Enter quantity: Enter unit price: [DEBUG] quantity = 3
+[DEBUG] unit price = 100.00
+[DEBUG] subtotal = 300.00
+[DEBUG] tax = 15.00
+Subtotal: 300.00
+Tax (5%): 15.00
+Total: 315.00
+
+3. Invalid quantity
+Input:
+101
+
+Output:
+Enter quantity: Invalid quantity. Enter a value from 0 to 100.
+
+Note: These are captured program outputs from a local GCC test. They are not a screenshot of the Dev-C++ IDE. For the assignment, capture a genuine screenshot after running the same program in Dev-C++ if the instructor specifically requires IDE screenshots.
